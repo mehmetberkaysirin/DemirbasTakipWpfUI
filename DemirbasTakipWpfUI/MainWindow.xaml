@@ -1,0 +1,53 @@
+﻿<Window x:Class="DemirbasTakipWpfUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DemirbasTakipWpfUI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="681" Width="1024" Loaded="Window_Loaded">
+    <Grid Width="1024" Margin="0,0,-8,1">
+        <ComboBox x:Name="cmbDepartman" HorizontalAlignment="Left" Margin="699,22,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="CmbDepartman_SelectionChanged"/>
+        <Label Content="Departman Seciniz" HorizontalAlignment="Left" Margin="566,21,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txbPersonnelName" HorizontalAlignment="Left" Height="23" Margin="160,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnPersonnelSave" Content="Personel Add" HorizontalAlignment="Left" Margin="889,22,0,0" VerticalAlignment="Top" Width="120" Click="BtnPersonnelSave_Click"/>
+        <Label Content="Personel Name" HorizontalAlignment="Left" Margin="23,23,0,0" VerticalAlignment="Top"/>
+        <Label Content="Personel Last Name" HorizontalAlignment="Left" Margin="290,23,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txbPersonelLastName" HorizontalAlignment="Left" Height="23" Margin="427,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnDepartmantAdd" Content="+" HorizontalAlignment="Left" Margin="823,22,0,0" VerticalAlignment="Top" Width="21" Foreground="#FF3FB812" Click="BtnDepartmantAdd_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FF34B816" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <GroupBox Header="Personel Ekleme" HorizontalAlignment="Left" Height="68" Margin="9,0,0,0" VerticalAlignment="Top" Width="1011" FontWeight="Bold" FontSize="16"/>
+        <GroupBox Header="Ürün Ekleme" HorizontalAlignment="Left" Height="541" Margin="767,108,0,0" VerticalAlignment="Top" Width="249" FontWeight="Bold" FontSize="16"/>
+        <Button x:Name="btnSaveProduct" Content="Save" HorizontalAlignment="Left" Margin="926,213,0,0" VerticalAlignment="Top" Width="81" Click="BtnSaveProduct_Click" Height="24"/>
+        <TextBox x:Name="txbProductName" HorizontalAlignment="Left" Height="25" Margin="877,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130"/>
+        <Label Content="Product Name" HorizontalAlignment="Left" Margin="778,132,0,0" VerticalAlignment="Top" Height="29" Width="93"/>
+        <TextBox x:Name="txbPrice" HorizontalAlignment="Left" Height="25" Margin="877,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130"/>
+        <Label Content="Price" HorizontalAlignment="Left" Margin="778,165,0,0" VerticalAlignment="Top" Height="29" Width="39"/>
+        <DataGrid x:Name="dgProducts" HorizontalAlignment="Left" Height="391" Margin="774,247,0,0" VerticalAlignment="Top" Width="237" SelectedCellsChanged="DgProducts_SelectedCellsChanged"/>
+        <GroupBox Header="Demirbaş Ekleme" HorizontalAlignment="Left" Height="544" Margin="4,105,0,0" VerticalAlignment="Top" Width="760" FontWeight="Bold" FontSize="16"/>
+        <ComboBox x:Name="cmbPersonel" HorizontalAlignment="Left" Margin="104,146,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Personel Seciniz" HorizontalAlignment="Left" Margin="5,146,0,0" VerticalAlignment="Top" Width="95"/>
+        <Label Content="Product_Id" HorizontalAlignment="Left" Margin="251,143,0,0" VerticalAlignment="Top"/>
+        <Label Content="İslemID" HorizontalAlignment="Left" Margin="13,210,0,0" VerticalAlignment="Top"/>
+        <Label Content="StartDate" HorizontalAlignment="Left" Margin="11,177,0,0" VerticalAlignment="Top"/>
+        <Label Content="EndDate" HorizontalAlignment="Left" Margin="253,172,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txbIslem" HorizontalAlignment="Left" Height="23" Margin="105,212,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txbProductId" HorizontalAlignment="Left" Height="23" Margin="322,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnsaveAllocation" Content="Allocation" HorizontalAlignment="Left" Margin="543,148,0,0" VerticalAlignment="Top" Width="75" Click="BtnsaveAllocation_Click"/>
+        <DataGrid x:Name="dgAllocations" HorizontalAlignment="Left" Height="388" Margin="6,246,0,0" VerticalAlignment="Top" Width="746"/>
+        <Label Content="Description" HorizontalAlignment="Left" Margin="245,211,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txbDescription" HorizontalAlignment="Left" Height="23" Margin="321,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="316"/>
+        <CheckBox x:Name="cbStatus" Content="Status" HorizontalAlignment="Left" Margin="476,152,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.118,0.062"/>
+        <DatePicker x:Name="StartDate" HorizontalAlignment="Left" Margin="106,180,0,0" VerticalAlignment="Top" Width="118"/>
+        <DatePicker x:Name="EndDate" HorizontalAlignment="Left" Margin="323,175,0,0" VerticalAlignment="Top" Width="118"/>
+
+    </Grid>
+</Window>
